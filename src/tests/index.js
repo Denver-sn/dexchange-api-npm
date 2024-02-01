@@ -1,4 +1,4 @@
-const DAPI = require("../../dist/index");
+const DAPI = require("dexchange-api");
 
 const dapi = new DAPI("APIKEY");
 
