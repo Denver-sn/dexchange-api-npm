@@ -1,0 +1,18 @@
+{
+	"name": "dexchange-api",
+	"version": "1.0.0",
+	"description": "DEXCHANGE API for Node.js",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc",
+		"test": "node src/tests/index.js"
+	},
+	"keywords": [],
+	"author": "DEXCHANGE",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^20.11.14",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.3.3"
+	}
+}
