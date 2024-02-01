@@ -1,13 +1,13 @@
 ## DEXCHANGE-API - Node.js module
 
-DAPI (DEXCHANGE-API) is a Node.js module that provides a simple way to interact with the Dexchange API.
+Node.js package to interact with the Dexchange API easily.
 
 [https://dash-api.dexchange.sn/](https://dash-api.dexchange.sn/auth/signup)
 
 ## Installation
 
 ```bash
-npm install dsms
+npm install dexchange-api
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ npm install dsms
 ```javascript
 const DAPI = require("dexchange-api");
 
-const dapi = new DAPI("APIKEY");
+const dapi = new DAPI("YOUR_API_KEY");
 
 // Random data for initTransaction
 const randomTransaction = {
@@ -35,7 +35,7 @@ dapi
 	.then((transaction) => console.log(transaction))
 	.catch((error) => console.log(error));
 
-// Exemple avec IConfirmWizall
+// Random data for confrim wizall transaction
 const randomConfirmWizall = {
 	otp: generateRandomOTP(),
 	transactionId: generateRandomUUID(),
@@ -46,12 +46,12 @@ dapi
 	.then((confirmation) => console.log(confirmation))
 	.catch((error) => console.log(error));
 
-// Exemple de données pour initier un paiement marchand
+// Random data to init merchant transaction
 const randomMerchantTransaction = {
 	ItemName: "Random Item",
 	ItemPrice: Math.floor(Math.random() * 1000) + 1,
 	callBackURL: "https://example.com/merchant-callback",
-	customData: "Random Custom Data",
+	customData: "{customData: 'customData'}",
 	externalTransactionId: generateRandomUUID(),
 	failureUrl: "https://example.com/merchant-failure",
 	successUrl: "https://example.com/merchant-success",
